@@ -1,0 +1,15 @@
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - run: head -c 250MB /dev/urandom > ostechnix.zip
+      - uses: actions/upload-artifact@v3
+        with:
+          path: | 
+            *.zip
+
+    
