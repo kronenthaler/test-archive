@@ -15,8 +15,7 @@ jobs:
       - name: Updated summary
         run: |
           echo "# Hello world, ${{ matrix.module }} report!" >> $GITHUB_STEP_SUMMARY
-          echo "|table|with|<<EOF" >> $GITHUB_STEP_SUMMARY
+          echo "|table|with|" >> $GITHUB_STEP_SUMMARY
           echo "|-----|----|" >> $GITHUB_STEP_SUMMARY
           echo "|A    |B   |" >> $GITHUB_STEP_SUMMARY
-          echo 'EOF' >> $GITHUB_STEP_SUMMARY
-          
+
